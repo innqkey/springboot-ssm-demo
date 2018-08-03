@@ -25,6 +25,8 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml><!-- 不使用web.xml时使用 -->
 	</properties>
 
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
