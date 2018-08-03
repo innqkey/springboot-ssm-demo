@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.common.PageTemp;
 import com.common.ResUtils;
 import com.github.pagehelper.PageInfo;
-import com.kenneth.domain.UserPo;
+import com.kenneth.domain.User;
 import com.kenneth.mapper.UserMapper;
 import com.kenneth.service.UserService;
 
@@ -30,17 +30,17 @@ public class Welcome {
     }
     @GetMapping("/selectAll")
     public String selectAll(PageTemp page){
-        PageInfo<UserPo> userList = userService.selectAll(page);
+        PageInfo<User> userList = userService.selectAll(page);
         return ResUtils.okRes(userList);
     }
     @GetMapping("/selectOne")
     public String selectOne(Integer userId){
-        UserPo selectOne = userService.selectOne(userId);
+        User selectOne = userService.selectOne(userId);
         return ResUtils.okRes(selectOne);
     }
     
     @PostMapping("/insert")
-    public String insert(UserPo user){
+    public String insert(User user){
         userService.insertOne(user);
         return ResUtils.okRes();
     }
