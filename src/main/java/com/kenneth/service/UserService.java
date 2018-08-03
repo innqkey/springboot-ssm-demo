@@ -1,6 +1,8 @@
 package com.kenneth.service;
 
-import com.kenneth.domain.User;
+import com.common.PageTemp;
+import com.github.pagehelper.PageInfo;
+import com.kenneth.domain.UserPo;
 
 /**
  * @author qinkai
@@ -8,5 +10,9 @@ import com.kenneth.domain.User;
  */
 public interface UserService {
 
-    public User selectByUserId(Integer userId);
+    public void insertOne(UserPo user);
+
+    public PageInfo<UserPo> selectAll(PageTemp page);
+
+    public UserPo selectOne(Integer userId);
 }

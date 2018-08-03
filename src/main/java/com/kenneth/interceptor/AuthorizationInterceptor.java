@@ -30,7 +30,7 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
 	private  static  final Logger logger = LoggerFactory.getLogger(AuthorizationInterceptor. class);
 	public boolean preHandle(HttpServletRequest request,
             HttpServletResponse response, Object handler) throws Exception {
-		logger.info("====权限拦截器===="+handler);
+//		logger.info("====权限拦截器===="+handler);
 		//token是否开启，1开启、2关闭
 		if("2".equals(FileUtil.getApplicationPro("http.token"))){
     		return true;

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import javax.persistence.*;
 
 @Table(name = "t_user")
-public class User {
+public class UserPo {
     /**
      * 主键id
      */

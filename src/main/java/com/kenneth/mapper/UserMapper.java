@@ -1,7 +1,7 @@
 package com.kenneth.mapper;
 
 import com.common.MyMapper;
-import com.kenneth.domain.User;
+import com.kenneth.domain.UserPo;
 
-public interface UserMapper extends MyMapper<User> {
+public interface UserMapper extends MyMapper<UserPo> {
 }
