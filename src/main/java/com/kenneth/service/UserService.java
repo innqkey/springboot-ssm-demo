@@ -15,4 +15,6 @@ public interface UserService {
     public PageInfo<User> selectAll(PageTemp page);
 
     public User selectOne(Integer userId);
+
+    public void updateById(Integer userId, String name);
 }

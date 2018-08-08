@@ -3,6 +3,7 @@ package com.kenneth.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.common.PageTemp;
@@ -42,9 +43,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    @Cacheable(value = "selectOne")
     public User selectOne(Integer userId) {
         User user = new User();
         user.setId(userId);
         return userMapper.selectOne(user);
+    }
+
+    @Override
+    public void updateById(Integer userId, String name) {
+        userMapper.updateByUserId(userId,name);
     }
 }

@@ -17,7 +17,7 @@ import com.kenneth.service.UserService;
  * @date 2018年8月2日
  */
 @RestController
-public class Welcome {
+public class WelcomeController {
 
     @Autowired
     private UserService userService;
@@ -37,6 +37,12 @@ public class Welcome {
     public String selectOne(Integer userId){
         User selectOne = userService.selectOne(userId);
         return ResUtils.okRes(selectOne);
+    }
+    
+    @PostMapping("/update")
+    public String update(Integer userId,String name){
+        userService.updateById(userId,name);
+        return ResUtils.okRes();
     }
     
     @PostMapping("/insert")
