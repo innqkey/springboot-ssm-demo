@@ -6,6 +6,9 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 
+import com.kenneth.constant.ContextConstant;
+import com.kenneth.service.JmsConstant;
+
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
