@@ -7,12 +7,9 @@ package com.kenneth.constant;
  */
 public class ContextConstant {
 
-    //jsm
-    public static String QUEUE_NAME = "ptp";
-    public static String TOPIC_NAME = "pubsub";
-    public static String RESPONSE_SUCCESS = "success";
-    public static String QUEUE_CONTAINER = "ptpContainer";
-    public static String TOPIC_CONTAINER = "pubsubContainer";
+    //通用状态
+    public static final Byte STATE_DISABLE = 10;//禁用,未通过
+    public static final Byte STATE_USE = 20;//可使用,通过
     
     //上传异常,701图片为空，702图片超出大小，709图片的类型错误，704 服务器异常
     public static final String IMAGE_NULL = "701";

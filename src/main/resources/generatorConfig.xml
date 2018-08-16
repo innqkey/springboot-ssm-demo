@@ -28,7 +28,11 @@
         <javaClientGenerator targetPackage="com.kenneth.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
 
-        <table tableName="t_user" domainObjectName="User">
+        <table tableName="t_quartz_info" domainObjectName="QuartzInfo">
+            <!--这边默认的主键为自增的方式 所以在设计数据的时候要匹配-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table tableName="t_quartz_log" domainObjectName="QuartzLog">
             <!--这边默认的主键为自增的方式 所以在设计数据的时候要匹配-->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
